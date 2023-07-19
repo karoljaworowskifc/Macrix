@@ -1,0 +1,56 @@
+<h1 id="tableLabel">People list - Macrix test task </h1>
+
+<p>Read all people from file.</p>
+
+<!--<p *ngIf="!data?.length"><em>Loading...</em></p>-->
+
+<!--<div class="card">
+  <form [(formGroup)] = "personForm" >
+    <div>
+      <div class="form-row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>First Name</label>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" formControlName ="firstName" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>-->
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="data.length">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Street</th>
+      <th>House number</th>
+      <th>Apartment</th>
+      <th>Postal code</th>
+      <th>Town</th>
+      <th>Phone number</th>
+      <th>Date of birth</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of data">
+      <td>{{ person.firstName }}</td>
+      <td>{{ person.lastName }}</td>
+      <td>{{ person.streetName }}</td>
+      <td>{{ person.houseNumber }}</td>
+      <td>{{ person.apartment }}</td>
+      <td>{{ person.postalCode }}</td>
+      <td>{{ person.town }}</td>
+      <td>{{ person.phoneNumber }}</td>
+      <td>{{ person.dateOfBirth }}</td>
+      <td>{{ person.age }}</td>
+    </tr>
+  </tbody>
+</table>
